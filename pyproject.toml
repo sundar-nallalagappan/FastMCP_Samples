@@ -1,0 +1,17 @@
+[project]
+name = "mcpserver-langchain"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "google-adk>=1.22.1",
+    "langchain>=1.2.6",
+    "langchain-groq>=1.1.1",
+    "langchain-mcp-adapters>=0.2.1",
+    "langgraph>=1.0.6",
+    "litellm>=1.75.5",
+    "mcp>=1.25.0",
+    "openai>=2.15.0",
+    "semantic-kernel[mcp]>=1.36.0",
+]

@@ -1,0 +1,1443 @@
+2026-01-17 22:05:02,051 | INFO | adk.mcp.app | agent_request_started
+2026-01-17 22:05:02,995 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-17 22:05:03,318 | INFO | mcp.client.streamable_http | Received session ID: 6e6c0fcde276437fb7427dac813aff47
+2026-01-17 22:05:03,318 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-17 22:05:03,891 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-17 22:05:06,311 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-17 22:05:06,311 | WARNING | google_genai.types | Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-01-17 22:05:06,897 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-17 22:05:08,361 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-17 22:05:08,957 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-17 22:05:10,632 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-17 22:05:10,636 | INFO | adk.mcp.app | agent_request_completed
+2026-01-17 22:05:10,647 | INFO | adk.mcp.app | toolset_closed
+2026-01-17 22:05:10,647 | INFO | adk.mcp.app | toolset_closed
+2026-01-18 10:53:41,804 | INFO | google_adk.google.adk.plugins.plugin_manager | Plugin 'observability' registered.
+2026-01-18 10:53:41,804 | INFO | adk.mcp.app | agent_started
+2026-01-18 10:53:42,992 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-18 10:53:43,518 | INFO | mcp.client.streamable_http | Received session ID: 2c043ec12b3e4fdf82f93d665fa34c9e
+2026-01-18 10:53:43,528 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-18 10:53:44,064 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 10:53:44,121 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 10:53:46,502 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 10:53:46,502 | WARNING | google_genai.types | Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-01-18 10:53:46,502 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 10:53:46,831 | ERROR | google_adk.google.adk.plugins.plugin_manager | Error in plugin 'observability' during 'before_tool_callback' callback: ObservabilityPlugin.before_tool_callback() got an unexpected keyword argument 'tool_args'
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 289, in _run_callbacks
+    result = await callback_method(**kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ObservabilityPlugin.before_tool_callback() got an unexpected keyword argument 'tool_args'
+2026-01-18 10:53:47,108 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object stdio_client at 0x0000018E178802E0>
+asyncgen: <async_generator object stdio_client at 0x0000018E178802E0>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 182, in stdio_client
+    async with (
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 10:53:47,174 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamablehttp_client at 0x0000018E17871580>
+asyncgen: <async_generator object streamablehttp_client at 0x0000018E17871580>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 670, in streamable_http_client
+    |     yield (
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 722, in streamablehttp_client
+    |     yield streams
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 717, in streamablehttp_client
+    async with streamable_http_client(
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\contextlib.py", line 231, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 647, in streamable_http_client
+    async with anyio.create_task_group() as tg:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 10:53:47,239 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamable_http_client at 0x0000018E178665A0>
+asyncgen: <async_generator object streamable_http_client at 0x0000018E178665A0>
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 289, in _run_callbacks
+    result = await callback_method(**kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ObservabilityPlugin.before_tool_callback() got an unexpected keyword argument 'tool_args'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 244, in main
+    async for event in runner.run_async(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 519, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 507, in _run_with_trace
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 739, in _exec_with_plugin
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 496, in execute
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\base_agent.py", line 294, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\llm_agent.py", line 468, in _run_async_impl
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 362, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 449, in _run_one_step_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 565, in _postprocess_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 677, in _postprocess_handle_function_calls_async
+    if function_response_event := await functions.handle_function_calls_async(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 198, in handle_function_calls_async
+    return await handle_function_call_list_async(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 244, in handle_function_call_list_async
+    function_response_events = await asyncio.gather(*tasks)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 430, in _execute_single_function_call_async
+    function_response_event = await _run_with_trace()
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 346, in _run_with_trace
+    await invocation_context.plugin_manager.run_before_tool_callback(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 184, in run_before_tool_callback
+    return await self._run_callbacks(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 305, in _run_callbacks
+    raise RuntimeError(error_message) from e
+RuntimeError: Error in plugin 'observability' during 'before_tool_callback' callback: ObservabilityPlugin.before_tool_callback() got an unexpected keyword argument 'tool_args'
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-01-18 10:57:49,589 | INFO | google_adk.google.adk.plugins.plugin_manager | Plugin 'observability' registered.
+2026-01-18 10:57:49,589 | INFO | adk.mcp.app | agent_started
+2026-01-18 10:57:50,455 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-18 10:57:50,742 | INFO | mcp.client.streamable_http | Received session ID: 35729909c2774eddbd17784b02681075
+2026-01-18 10:57:50,742 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-18 10:57:51,248 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 10:57:51,304 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 10:57:53,548 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 10:57:53,548 | WARNING | google_genai.types | Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-01-18 10:57:53,548 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 10:57:53,813 | ERROR | google_adk.google.adk.plugins.plugin_manager | Error in plugin 'observability' during 'before_tool_callback' callback: ObservabilityPlugin.before_tool_callback() got an unexpected keyword argument 'tool_context'
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 289, in _run_callbacks
+    result = await callback_method(**kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ObservabilityPlugin.before_tool_callback() got an unexpected keyword argument 'tool_context'
+2026-01-18 10:57:54,076 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object stdio_client at 0x00000217E02F02E0>
+asyncgen: <async_generator object stdio_client at 0x00000217E02F02E0>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 182, in stdio_client
+    async with (
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 10:57:54,076 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamablehttp_client at 0x00000217E02E1580>
+asyncgen: <async_generator object streamablehttp_client at 0x00000217E02E1580>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 670, in streamable_http_client
+    |     yield (
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 722, in streamablehttp_client
+    |     yield streams
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 717, in streamablehttp_client
+    async with streamable_http_client(
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\contextlib.py", line 231, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 647, in streamable_http_client
+    async with anyio.create_task_group() as tg:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 10:57:54,076 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamable_http_client at 0x00000217E02D65A0>
+asyncgen: <async_generator object streamable_http_client at 0x00000217E02D65A0>
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 289, in _run_callbacks
+    result = await callback_method(**kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ObservabilityPlugin.before_tool_callback() got an unexpected keyword argument 'tool_context'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 242, in main
+    async for event in runner.run_async(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 519, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 507, in _run_with_trace
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 739, in _exec_with_plugin
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 496, in execute
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\base_agent.py", line 294, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\llm_agent.py", line 468, in _run_async_impl
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 362, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 449, in _run_one_step_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 565, in _postprocess_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 677, in _postprocess_handle_function_calls_async
+    if function_response_event := await functions.handle_function_calls_async(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 198, in handle_function_calls_async
+    return await handle_function_call_list_async(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 244, in handle_function_call_list_async
+    function_response_events = await asyncio.gather(*tasks)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 430, in _execute_single_function_call_async
+    function_response_event = await _run_with_trace()
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 346, in _run_with_trace
+    await invocation_context.plugin_manager.run_before_tool_callback(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 184, in run_before_tool_callback
+    return await self._run_callbacks(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 305, in _run_callbacks
+    raise RuntimeError(error_message) from e
+RuntimeError: Error in plugin 'observability' during 'before_tool_callback' callback: ObservabilityPlugin.before_tool_callback() got an unexpected keyword argument 'tool_context'
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-01-18 12:28:26,980 | INFO | google_adk.google.adk.plugins.plugin_manager | Plugin 'observability' registered.
+2026-01-18 12:28:26,983 | INFO | adk.mcp.app | agent_started
+2026-01-18 12:28:28,573 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-18 12:28:28,995 | INFO | mcp.client.streamable_http | Received session ID: 6d0c1a66b1b14139bee8060ed37a3447
+2026-01-18 12:28:28,995 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-18 12:28:29,530 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 12:28:29,598 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 12:28:32,612 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 12:28:32,615 | WARNING | google_genai.types | Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-01-18 12:28:32,647 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 12:28:33,020 | ERROR | google_adk.google.adk.plugins.plugin_manager | Error in plugin 'observability' during 'before_tool_callback' callback: 'NoneType' object has no attribute 'state'
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 289, in _run_callbacks
+    result = await callback_method(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 137, in before_tool_callback
+    callback_context.state["tool_start"] = time.time()
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'state'
+2026-01-18 12:28:33,360 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object stdio_client at 0x000001F269740190>
+asyncgen: <async_generator object stdio_client at 0x000001F269740190>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 182, in stdio_client
+    async with (
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 12:28:33,423 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamablehttp_client at 0x000001F269731580>
+asyncgen: <async_generator object streamablehttp_client at 0x000001F269731580>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 670, in streamable_http_client
+    |     yield (
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 722, in streamablehttp_client
+    |     yield streams
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 717, in streamablehttp_client
+    async with streamable_http_client(
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\contextlib.py", line 231, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 647, in streamable_http_client
+    async with anyio.create_task_group() as tg:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 12:28:33,440 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamable_http_client at 0x000001F2697265A0>
+asyncgen: <async_generator object streamable_http_client at 0x000001F2697265A0>
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 289, in _run_callbacks
+    result = await callback_method(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 137, in before_tool_callback
+    callback_context.state["tool_start"] = time.time()
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 245, in main
+    async for event in runner.run_async(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 519, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 507, in _run_with_trace
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 739, in _exec_with_plugin
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 496, in execute
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\base_agent.py", line 294, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\llm_agent.py", line 468, in _run_async_impl
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 362, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 449, in _run_one_step_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 565, in _postprocess_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 677, in _postprocess_handle_function_calls_async
+    if function_response_event := await functions.handle_function_calls_async(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 198, in handle_function_calls_async
+    return await handle_function_call_list_async(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 244, in handle_function_call_list_async
+    function_response_events = await asyncio.gather(*tasks)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 430, in _execute_single_function_call_async
+    function_response_event = await _run_with_trace()
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 346, in _run_with_trace
+    await invocation_context.plugin_manager.run_before_tool_callback(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 184, in run_before_tool_callback
+    return await self._run_callbacks(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 305, in _run_callbacks
+    raise RuntimeError(error_message) from e
+RuntimeError: Error in plugin 'observability' during 'before_tool_callback' callback: 'NoneType' object has no attribute 'state'
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-01-18 12:30:19,227 | INFO | google_adk.google.adk.plugins.plugin_manager | Plugin 'observability' registered.
+2026-01-18 12:30:19,227 | INFO | adk.mcp.app | agent_started
+2026-01-18 12:30:20,549 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-18 12:30:20,893 | INFO | mcp.client.streamable_http | Received session ID: 58f5c94a805f4751b41bb376e2312edb
+2026-01-18 12:30:20,893 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-18 12:30:21,433 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 12:30:21,549 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 12:30:22,889 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object stdio_client at 0x0000021985D20190>
+asyncgen: <async_generator object stdio_client at 0x0000021985D20190>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 182, in stdio_client
+    async with (
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 12:30:22,899 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamablehttp_client at 0x0000021985D11580>
+asyncgen: <async_generator object streamablehttp_client at 0x0000021985D11580>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 670, in streamable_http_client
+    |     yield (
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 722, in streamablehttp_client
+    |     yield streams
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 717, in streamablehttp_client
+    async with streamable_http_client(
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\contextlib.py", line 231, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 647, in streamable_http_client
+    async with anyio.create_task_group() as tg:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 12:30:22,905 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamable_http_client at 0x0000021985D065A0>
+asyncgen: <async_generator object streamable_http_client at 0x0000021985D065A0>
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\models\google_llm.py", line 241, in generate_content_async
+    response = await self.api_client.aio.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\models.py", line 7018, in generate_content
+    return await self._generate_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\models.py", line 5836, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1432, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1365, in _async_request
+    return await self._async_retry(  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1310, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\errors.py", line 203, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\errors.py", line 225, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 36.198725444s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '36s'}]}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 249, in main
+    async for event in runner.run_async(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 519, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 507, in _run_with_trace
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 739, in _exec_with_plugin
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 496, in execute
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\base_agent.py", line 294, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\llm_agent.py", line 468, in _run_async_impl
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 362, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 439, in _run_one_step_async
+    async for llm_response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 812, in _call_llm_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 796, in _call_llm_with_tracing
+    async for llm_response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 1049, in _run_and_handle_error
+    raise model_error
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 1035, in _run_and_handle_error
+    async for response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\models\google_llm.py", line 260, in generate_content_async
+    raise _ResourceExhaustedError(ce) from ce
+google.adk.models.google_llm._ResourceExhaustedError: 
+On how to mitigate this issue, please refer to:
+
+https://google.github.io/adk-docs/agents/models/#error-code-429-resource_exhausted
+
+
+429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 36.198725444s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '36s'}]}}
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-01-18 12:33:43,574 | INFO | google_adk.google.adk.plugins.plugin_manager | Plugin 'observability' registered.
+2026-01-18 12:33:43,574 | INFO | adk.mcp.app | agent_started
+2026-01-18 12:33:44,555 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-18 12:33:44,882 | INFO | mcp.client.streamable_http | Received session ID: 5eae399628794827be511d733aeb8d53
+2026-01-18 12:33:44,882 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-18 12:33:45,439 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 12:33:45,472 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 12:33:46,545 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object stdio_client at 0x000001EEC8270190>
+asyncgen: <async_generator object stdio_client at 0x000001EEC8270190>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 182, in stdio_client
+    async with (
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 12:33:46,545 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamablehttp_client at 0x000001EEC8261580>
+asyncgen: <async_generator object streamablehttp_client at 0x000001EEC8261580>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 670, in streamable_http_client
+    |     yield (
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 722, in streamablehttp_client
+    |     yield streams
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 717, in streamablehttp_client
+    async with streamable_http_client(
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\contextlib.py", line 231, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 647, in streamable_http_client
+    async with anyio.create_task_group() as tg:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 12:33:46,554 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamable_http_client at 0x000001EEC82565A0>
+asyncgen: <async_generator object streamable_http_client at 0x000001EEC82565A0>
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\models\google_llm.py", line 241, in generate_content_async
+    response = await self.api_client.aio.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\models.py", line 7018, in generate_content
+    return await self._generate_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\models.py", line 5836, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1432, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1365, in _async_request
+    return await self._async_retry(  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1310, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\errors.py", line 203, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\errors.py", line 225, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 12.507053414s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '12s'}]}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 249, in main
+    async for event in runner.run_async(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 519, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 507, in _run_with_trace
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 739, in _exec_with_plugin
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 496, in execute
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\base_agent.py", line 294, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\llm_agent.py", line 468, in _run_async_impl
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 362, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 439, in _run_one_step_async
+    async for llm_response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 812, in _call_llm_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 796, in _call_llm_with_tracing
+    async for llm_response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 1049, in _run_and_handle_error
+    raise model_error
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 1035, in _run_and_handle_error
+    async for response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\models\google_llm.py", line 260, in generate_content_async
+    raise _ResourceExhaustedError(ce) from ce
+google.adk.models.google_llm._ResourceExhaustedError: 
+On how to mitigate this issue, please refer to:
+
+https://google.github.io/adk-docs/agents/models/#error-code-429-resource_exhausted
+
+
+429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 12.507053414s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '12s'}]}}
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-01-18 12:36:20,417 | INFO | google_adk.google.adk.plugins.plugin_manager | Plugin 'observability' registered.
+2026-01-18 12:36:20,417 | INFO | adk.mcp.app | agent_started
+2026-01-18 12:36:21,433 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-18 12:36:21,729 | INFO | mcp.client.streamable_http | Received session ID: 16ec9fe407454b6c846c93658f0eccad
+2026-01-18 12:36:21,729 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-18 12:36:22,237 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 12:36:22,297 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 12:36:23,686 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object stdio_client at 0x000001FDE0AC0190>
+asyncgen: <async_generator object stdio_client at 0x000001FDE0AC0190>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 182, in stdio_client
+    async with (
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 12:36:23,693 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamablehttp_client at 0x000001FDE0AB1580>
+asyncgen: <async_generator object streamablehttp_client at 0x000001FDE0AB1580>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 670, in streamable_http_client
+    |     yield (
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 722, in streamablehttp_client
+    |     yield streams
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 717, in streamablehttp_client
+    async with streamable_http_client(
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\contextlib.py", line 231, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 647, in streamable_http_client
+    async with anyio.create_task_group() as tg:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 12:36:23,693 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamable_http_client at 0x000001FDE0AA65A0>
+asyncgen: <async_generator object streamable_http_client at 0x000001FDE0AA65A0>
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\models\google_llm.py", line 241, in generate_content_async
+    response = await self.api_client.aio.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\models.py", line 7018, in generate_content
+    return await self._generate_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\models.py", line 5836, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1432, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1365, in _async_request
+    return await self._async_retry(  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1310, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\errors.py", line 203, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\errors.py", line 225, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 35.430857112s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 249, in main
+    async for event in runner.run_async(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 519, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 507, in _run_with_trace
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 739, in _exec_with_plugin
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 496, in execute
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\base_agent.py", line 294, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\llm_agent.py", line 468, in _run_async_impl
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 362, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 439, in _run_one_step_async
+    async for llm_response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 812, in _call_llm_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 796, in _call_llm_with_tracing
+    async for llm_response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 1049, in _run_and_handle_error
+    raise model_error
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 1035, in _run_and_handle_error
+    async for response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\models\google_llm.py", line 260, in generate_content_async
+    raise _ResourceExhaustedError(ce) from ce
+google.adk.models.google_llm._ResourceExhaustedError: 
+On how to mitigate this issue, please refer to:
+
+https://google.github.io/adk-docs/agents/models/#error-code-429-resource_exhausted
+
+
+429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 35.430857112s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-01-18 12:40:30,291 | INFO | google_adk.google.adk.plugins.plugin_manager | Plugin 'observability' registered.
+2026-01-18 12:40:30,291 | INFO | adk.mcp.app | agent_started
+2026-01-18 12:40:31,242 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-18 12:40:31,560 | INFO | mcp.client.streamable_http | Received session ID: 0b544d7c978047afa3d4c36be2448864
+2026-01-18 12:40:31,560 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-18 12:40:32,071 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 12:40:32,121 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 12:40:33,479 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object stdio_client at 0x00000198F35A0190>
+asyncgen: <async_generator object stdio_client at 0x00000198F35A0190>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 182, in stdio_client
+    async with (
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 12:40:33,479 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamablehttp_client at 0x00000198F3591580>
+asyncgen: <async_generator object streamablehttp_client at 0x00000198F3591580>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 670, in streamable_http_client
+    |     yield (
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 722, in streamablehttp_client
+    |     yield streams
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 717, in streamablehttp_client
+    async with streamable_http_client(
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\contextlib.py", line 231, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 647, in streamable_http_client
+    async with anyio.create_task_group() as tg:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 12:40:33,479 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamable_http_client at 0x00000198F35865A0>
+asyncgen: <async_generator object streamable_http_client at 0x00000198F35865A0>
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\models\google_llm.py", line 241, in generate_content_async
+    response = await self.api_client.aio.models.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\models.py", line 7018, in generate_content
+    return await self._generate_content(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\models.py", line 5836, in _generate_content
+    response = await self._api_client.async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1432, in async_request
+    result = await self._async_request(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1365, in _async_request
+    return await self._async_retry(  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 111, in __call__
+    do = await self.iter(retry_state=retry_state)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 153, in iter
+    result = await action(retry_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\_utils.py", line 99, in inner
+    return call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\__init__.py", line 420, in exc_check
+    raise retry_exc.reraise()
+          ^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\__init__.py", line 187, in reraise
+    raise self.last_attempt.result()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\tenacity\asyncio\__init__.py", line 114, in __call__
+    result = await fn(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\_api_client.py", line 1310, in _async_request_once
+    await errors.APIError.raise_for_async_response(response)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\errors.py", line 203, in raise_for_async_response
+    await cls.raise_error_async(status_code, response_json, response)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\genai\errors.py", line 225, in raise_error_async
+    raise ClientError(status_code, response_json, response)
+google.genai.errors.ClientError: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 25.63432227s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '25s'}]}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 249, in main
+    async for event in runner.run_async(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 519, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 507, in _run_with_trace
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 739, in _exec_with_plugin
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 496, in execute
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\base_agent.py", line 294, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\llm_agent.py", line 468, in _run_async_impl
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 362, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 439, in _run_one_step_async
+    async for llm_response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 812, in _call_llm_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 796, in _call_llm_with_tracing
+    async for llm_response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 1049, in _run_and_handle_error
+    raise model_error
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 1035, in _run_and_handle_error
+    async for response in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\models\google_llm.py", line 260, in generate_content_async
+    raise _ResourceExhaustedError(ce) from ce
+google.adk.models.google_llm._ResourceExhaustedError: 
+On how to mitigate this issue, please refer to:
+
+https://google.github.io/adk-docs/agents/models/#error-code-429-resource_exhausted
+
+
+429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\nPlease retry in 25.63432227s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '25s'}]}}
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-01-18 16:41:07,279 | INFO | google_adk.google.adk.plugins.plugin_manager | Plugin 'observability' registered.
+2026-01-18 16:41:07,279 | INFO | adk.mcp.app | agent_started
+2026-01-18 16:41:08,167 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-18 16:41:08,453 | INFO | mcp.client.streamable_http | Received session ID: e87c1cf582954c1384ba472f5ea5ba76
+2026-01-18 16:41:08,454 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-18 16:41:08,978 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 16:41:09,031 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 16:41:11,689 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 16:41:11,689 | WARNING | google_genai.types | Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-01-18 16:41:11,692 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 16:41:11,993 | ERROR | google_adk.google.adk.plugins.plugin_manager | Error in plugin 'observability' during 'before_tool_callback' callback: 'NoneType' object has no attribute 'state'
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 289, in _run_callbacks
+    result = await callback_method(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 146, in before_tool_callback
+    "trace_id": callback_context.state.get("trace_id"),
+                ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'state'
+2026-01-18 16:41:12,260 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object stdio_client at 0x000001CD8CE60190>
+asyncgen: <async_generator object stdio_client at 0x000001CD8CE60190>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 189, in stdio_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\stdio\__init__.py", line 182, in stdio_client
+    async with (
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 16:41:12,313 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamablehttp_client at 0x000001CD8CE51580>
+asyncgen: <async_generator object streamablehttp_client at 0x000001CD8CE51580>
+  + Exception Group Traceback (most recent call last):
+  |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 783, in __aexit__
+  |     raise BaseExceptionGroup(
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 670, in streamable_http_client
+    |     yield (
+    |   File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 722, in streamablehttp_client
+    |     yield streams
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 717, in streamablehttp_client
+    async with streamable_http_client(
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\contextlib.py", line 231, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\mcp\client\streamable_http.py", line 647, in streamable_http_client
+    async with anyio.create_task_group() as tg:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 789, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 461, in __exit__
+    raise RuntimeError(
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2026-01-18 16:41:12,351 | ERROR | asyncio | an error occurred during closing of asynchronous generator <async_generator object streamable_http_client at 0x000001CD8CE465A0>
+asyncgen: <async_generator object streamable_http_client at 0x000001CD8CE465A0>
+Traceback (most recent call last):
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 289, in _run_callbacks
+    result = await callback_method(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 146, in before_tool_callback
+    "trace_id": callback_context.state.get("trace_id"),
+                ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'state'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\SAIRAM\AppData\Roaming\uv\python\cpython-3.11.14-windows-x86_64-none\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\google_adk_client1.py", line 249, in main
+    async for event in runner.run_async(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 519, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 507, in _run_with_trace
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 739, in _exec_with_plugin
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\runners.py", line 496, in execute
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\base_agent.py", line 294, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\agents\llm_agent.py", line 468, in _run_async_impl
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 362, in run_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 449, in _run_one_step_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 565, in _postprocess_async
+    async for event in agen:
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\base_llm_flow.py", line 677, in _postprocess_handle_function_calls_async
+    if function_response_event := await functions.handle_function_calls_async(
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 198, in handle_function_calls_async
+    return await handle_function_call_list_async(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 244, in handle_function_call_list_async
+    function_response_events = await asyncio.gather(*tasks)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 430, in _execute_single_function_call_async
+    function_response_event = await _run_with_trace()
+                              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\flows\llm_flows\functions.py", line 346, in _run_with_trace
+    await invocation_context.plugin_manager.run_before_tool_callback(
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 184, in run_before_tool_callback
+    return await self._run_callbacks(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Generative AI\MCP\MCPServer_Langchain\.venv\Lib\site-packages\google\adk\plugins\plugin_manager.py", line 305, in _run_callbacks
+    raise RuntimeError(error_message) from e
+RuntimeError: Error in plugin 'observability' during 'before_tool_callback' callback: 'NoneType' object has no attribute 'state'
+
+During handling of the above exception, another exception occurred:
+
+RuntimeError: aclose(): asynchronous generator is already running
+2026-01-18 16:42:04,293 | INFO | google_adk.google.adk.plugins.plugin_manager | Plugin 'observability' registered.
+2026-01-18 16:42:04,293 | INFO | adk.mcp.app | agent_started
+2026-01-18 16:42:05,125 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-18 16:42:05,410 | INFO | mcp.client.streamable_http | Received session ID: c9e0ad1e18af4eaa9a94fee70930676e
+2026-01-18 16:42:05,410 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-18 16:42:05,927 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 16:42:05,978 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 16:42:08,087 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 16:42:08,087 | WARNING | google_genai.types | Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-01-18 16:42:08,087 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 16:42:08,628 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 16:42:08,675 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 16:42:10,550 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 16:42:10,550 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 16:42:10,820 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 16:42:10,873 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 16:42:12,709 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 16:42:12,709 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 16:42:13,276 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 16:42:13,320 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 16:42:15,188 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 16:42:15,188 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 16:42:15,189 | INFO | adk.mcp.app | agent_completed
+2026-01-18 16:50:10,245 | INFO | google_adk.google.adk.plugins.plugin_manager | Plugin 'observability' registered.
+2026-01-18 16:50:10,246 | INFO | adk.mcp.app | agent_started
+2026-01-18 16:50:11,183 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-18 16:50:11,531 | INFO | mcp.client.streamable_http | Received session ID: 2dd8304e9b974916b68dea5946dd3b94
+2026-01-18 16:50:11,531 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-18 16:50:12,064 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 16:50:12,111 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 16:50:14,307 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 16:50:14,307 | WARNING | google_genai.types | Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-01-18 16:50:14,307 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 16:50:14,560 | INFO | adk.mcp.app | tool_call_started
+2026-01-18 16:50:14,575 | INFO | adk.mcp.app | tool_call_completed
+2026-01-18 16:50:14,847 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 16:50:14,885 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 16:50:16,858 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 16:50:16,859 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 16:50:16,860 | INFO | adk.mcp.app | tool_call_started
+2026-01-18 16:50:16,866 | INFO | adk.mcp.app | tool_call_completed
+2026-01-18 16:50:17,143 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 16:50:17,186 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 16:50:19,042 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 16:50:19,042 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 16:50:19,042 | INFO | adk.mcp.app | tool_call_started
+2026-01-18 16:50:19,306 | INFO | adk.mcp.app | tool_call_completed
+2026-01-18 16:50:19,574 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 16:50:19,612 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 16:50:21,228 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 16:50:21,228 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 16:50:21,228 | INFO | adk.mcp.app | agent_completed
+2026-01-18 17:11:40,269 | INFO | google_adk.google.adk.plugins.plugin_manager | Plugin 'observability' registered.
+2026-01-18 17:11:40,269 | INFO | adk.mcp.app | agent_started
+2026-01-18 17:11:41,202 | INFO | google_genai.types | 
+Note: Conversion of fields that are not included in the JSONSchema class are ignored.
+Json Schema is now supported natively by both Vertex AI and Gemini API. Users
+are recommended to pass/receive Json Schema directly to/from the API. For example:
+1. the counter part of GenerateContentConfig.response_schema is
+   GenerateContentConfig.response_json_schema, which accepts [JSON
+  Schema](https://json-schema.org/)
+2. the counter part of FunctionDeclaration.parameters is
+   FunctionDeclaration.parameters_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+3. the counter part of FunctionDeclaration.response is
+   FunctionDeclaration.response_json_schema, which accepts [JSON
+   Schema](https://json-schema.org/)
+
+2026-01-18 17:11:41,602 | INFO | mcp.client.streamable_http | Received session ID: d42c072ae3ea4303b1ff8e5478bf0ef1
+2026-01-18 17:11:41,602 | INFO | mcp.client.streamable_http | Negotiated protocol version: 2025-11-25
+2026-01-18 17:11:42,182 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 17:11:42,268 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 17:11:44,487 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 17:11:44,487 | WARNING | google_genai.types | Warning: there are non-text parts in the response: ['function_call'], returning concatenated text result from text parts. Check the full candidates.content.parts accessor to get the full model response.
+2026-01-18 17:11:44,489 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 17:11:44,760 | INFO | adk.mcp.app | tool_call_started
+2026-01-18 17:11:44,778 | INFO | adk.mcp.app | tool_call_completed
+2026-01-18 17:11:45,045 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 17:11:45,093 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 17:11:46,941 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 17:11:46,941 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 17:11:46,943 | INFO | adk.mcp.app | tool_call_started
+2026-01-18 17:11:46,949 | INFO | adk.mcp.app | tool_call_completed
+2026-01-18 17:11:47,225 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 17:11:47,295 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 17:11:49,001 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 17:11:49,001 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 17:11:49,002 | INFO | adk.mcp.app | tool_call_started
+2026-01-18 17:11:49,280 | INFO | adk.mcp.app | tool_call_completed
+2026-01-18 17:11:49,563 | INFO | adk.mcp.app | llm_call_started
+2026-01-18 17:11:49,670 | INFO | google_adk.google.adk.models.google_llm | Sending out request, model: gemini-2.5-flash, backend: GoogleLLMVariant.GEMINI_API, stream: False
+2026-01-18 17:11:51,682 | INFO | google_adk.google.adk.models.google_llm | Response received from the model.
+2026-01-18 17:11:51,683 | INFO | adk.mcp.app | llm_call_completed
+2026-01-18 17:11:51,684 | INFO | adk.mcp.app | agent_completed

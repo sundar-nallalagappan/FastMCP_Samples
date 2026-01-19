@@ -1,0 +1,10 @@
+langchain-groq
+langchain-mcp-adapters
+mcp
+langgraph
+langchain
+google-adk
+litellm>=1.75.5
+semantic-kernel 
+semantic-kernel[mcp] 
+openai
